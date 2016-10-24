@@ -1,5 +1,12 @@
 $superblue : #0000ff;
 $jongreen : #00ff00;
+$yellow : yellow;
+
+body {
+  background-image: url("../img/BG.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+}
 
 .jumbotron {
   background-color: $superblue;
@@ -10,5 +17,78 @@ $jongreen : #00ff00;
     color: red;
     text-align: center;
     text-shadow: 2px 2px yellow;
+  }
+}
+
+#links {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16pt;
+  color:white;
+  margin: 10px 10px;
+  a {
+    color: white;
+    background-color: rgba(	0,0,128,1);
+    font-weight: bolder;
+    padding:5px 5px 5px 5px;
+    border: 3px solid white;
+    &:hover {
+      background-color: $jongreen;
+      color:black;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  color:white;
+}
+
+footer {
+  font-size: 16pt;
+  a {
+    color:white;
+  }
+}
+
+#body {
+  color: white;
+  background-color: rgba(	0,0,128,0.5);
+  text-align: center;
+  list-style-type: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18pt;
+  li {
+    background-color: rgba(	0,0,128,0.5);
+    margin: 10px 10px;
+    a {
+      color: white;
+    }
+  }
+  img {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+.btn {
+  background-color: $superblue;
+  color: white;
+  border: 5px  solid $jongreen;
+  font-size: 16pt;
+  &:hover {
+    color:$yellow;
+    background-color: red;
+    border: 5px solid $jongreen;
+    font-size: 16pt;
+  }
+}
+
+
+a {
+  color:white;
+  &:hover {
+    color:$jongreen;
   }
 }

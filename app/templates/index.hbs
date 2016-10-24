@@ -1,15 +1,18 @@
 <h1> Welcome to Super Rentals </h1>
 
+<div id="links">
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'announcement'}}Announcement{{/link-to}}
+{{#link-to 'contact'}}Contact Us{{/link-to}}
+</div>
+<br>
+<div id="body">
 We hope you find exactly what you're looking for in a place to stay.
 
-<ul>
+<div class = "col-md-12">
   {{#each model as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
-</ul>
-
+</div>
+</div>
 {{new-rental saveRental2="saveRental3"}}
-
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'announcement'}}Announcement{{/link-to}}
-{{#link-to 'contact'}}Click here to contact us.{{/link-to}}

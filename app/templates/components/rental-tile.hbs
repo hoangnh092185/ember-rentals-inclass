@@ -1,8 +1,9 @@
 <li>
   {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}}
   {{#if isImageShowing }}
-    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}} ></p>
+  <small>Click the image to exit</small>
+  <p><img style="cursor: crosshair"src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}} ></p>
   {{else}}
-    <button {{action 'imageShow'}} >Show image</button>
+  <button class="btn" {{action 'imageShow'}} >Show image</button>
   {{/if}}
 </li>
