@@ -6,6 +6,8 @@ body {
   background-image: url("../img/BG.jpg");
   background-repeat: no-repeat;
   background-color: black;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .jumbotron {
@@ -69,6 +71,7 @@ footer {
   img {
     width: 500px;
     height: 500px;
+    border: 2px solid red;
   }
 }
 
