@@ -14,10 +14,11 @@ module.exports = function(environment) {
     },
 
     firebase: {
-      apiKey: "AIzaSyDavMCc1nash7fCWRW9j2tY9y10QIptpnI",
-      authDomain: "super-rentals-mike.firebaseapp.com",
-      databaseURL: "https://super-rentals-mike.firebaseio.com",
-      storageBucket: "super-rentals-mike.appspot.com"
+      apiKey: "AIzaSyB_Oj5-D6x1DvvEPvQQjBEtW_wtMcawnRU",
+    authDomain: "epicodus-super-rentals-abd23.firebaseapp.com",
+    databaseURL: "https://epicodus-super-rentals-abd23.firebaseio.com",
+    storageBucket: "epicodus-super-rentals-abd23.appspot.com",
+    messagingSenderId: "357239620239"
     },
 
     APP: {

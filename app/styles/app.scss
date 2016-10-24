@@ -1,0 +1,14 @@
+$superblue : #0000ff;
+$jongreen : #00ff00;
+
+.jumbotron {
+  background-color: $superblue;
+  border: 10px solid $jongreen;
+  h1 {
+    font-family: Avengeance;
+    font-size: 60pt;
+    color: red;
+    text-align: center;
+    text-shadow: 2px 2px yellow;
+  }
+}
