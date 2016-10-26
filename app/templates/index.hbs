@@ -12,9 +12,21 @@
 We hope you find exactly what you're looking for in a place to stay.
 
 <div class = "col-md-12">
-  {{#each model as |rental|}}
+  {{#each model.rentals as |rental|}}
     {{rental-tile rental=rental}}
   {{/each}}
+</div>
+<div>
+  <h2> All Reviews </h2>
+
+<ul>
+  {{#each model.reviews as |review|}}
+    <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
+  {{/each}}
+</ul>
+
+<hr>
+
 </div>
 </div>
 {{new-rental saveRental2="saveRental3"}}
