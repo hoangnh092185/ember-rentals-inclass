@@ -14,13 +14,24 @@ export default Ember.Route.extend({
       rental.save();
     },
     destroyRental(rental) {
-      rental.destroyRecord();
+      var rental_deletions = rental.get('review').map(function(review){
+        return review.destroyRecord();
+      });
+      Ember.RSVP.all(rental_deletions).then(function(){
+        return rental.destroyRecord();
+      });
       this.transitionTo('index');
     },
     saveReview(params) {
-    var newReview = this.store.createRecord('review', params);
-    newReview.save();
-    this.transitionTo('index');
+      var rental = params.rental;
+      var newReview = this.store.createRecord('review', params);
+      rental.get('review').addObject(newReview);
+      newReview.save().then(function(){
+        return rental.save();
+      });
+    },
+    destroyReview(review){
+      review.destroyRecord();
     }
   }
 });

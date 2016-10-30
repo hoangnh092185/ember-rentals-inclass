@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export function rentalPopularity(params/*, hash*/) {
+export function rentalPopularity(params) {
   var rental = params[0];
 
   if(rental.get('reviews').get('length')>=5){

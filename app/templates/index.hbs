@@ -9,22 +9,10 @@
     <h2>Available Rentals</h2>
     <ul>
       {{#each model.rental as |rental|}}
-        {{rental-popularity rental}}{{rental-tile rental=rental}} {{rental-cost rental}}
+        {{rental-popularity rental}}{{rental-tile rental=rental}}{{rental-cost rental}}
       {{/each}}
     </ul>
   </div>
-
-  <!-- <div>
-    <h2> All Reviews </h2>
-
-    <ul>
-      {{#each model.reviews as |review|}}
-        <li>{{review.rating}} - {{review.content}} - by {{review.author}}</li>
-      {{/each}}
-    </ul>
-
-    <hr>
-  </div> -->
 
 </div>
 {{new-rental saveRental2="saveRental3"}}
