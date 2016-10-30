@@ -2,4 +2,12 @@ Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is 
 <br>
 
 <p><img src="{{rental.image}}" alt="{{rental.type}}"></p>
+
+<h2>Reviews</h2>
+{{new-review}}
+<ul>
+  {{#each sortedReviews as |review|}}
+    {{review-tile review=review destroyReview="destroyReview"}}
+  {{/each}}
+</ul>
 <button {{ action 'delete' rental }}> Delete </button>
