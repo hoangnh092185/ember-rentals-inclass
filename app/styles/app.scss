@@ -9,6 +9,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+label {
+  color: white;
+}
 
 .jumbotron {
   background-color: $superblue;
@@ -46,6 +49,9 @@ h1 {
   font-family: 'Orbitron', sans-serif;
   color:white;
 }
+h2, h3, h4 {
+  color:white;
+}
 
 footer {
   font-size: 16pt;
@@ -69,12 +75,16 @@ footer {
     }
   }
   img {
-    width: 2500px;
-    height: 2500px;
+    width: 250px;
+    height: 250px;
     border: 2px solid red;
   }
 }
-
+img {
+  width: 250px;
+  height: 250px;
+  border: 2px solid red;
+}
 .btn {
   background-color: $superblue;
   color: white;
@@ -98,4 +108,7 @@ a {
   &:hover {
     color:$jongreen;
   }
+}
+.content-right {
+  text-align: right;
 }

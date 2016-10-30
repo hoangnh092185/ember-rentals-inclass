@@ -1,7 +1,13 @@
 <div class="container">
   <header class = "jumbotron">
     <h1>Super Rentals</h1>
-    {{#link-to 'index'}}Home{{/link-to}}
+    <div id="links">
+      {{#link-to 'index'}}Home{{/link-to}}
+      {{#link-to 'about'}}About{{/link-to}}
+      {{#link-to 'announcement'}}Announcement{{/link-to}}
+      {{#link-to 'contact'}}Contact Us{{/link-to}}
+      {{#link-to 'agents'}}Agents{{/link-to}}
+    </div>
 
   </header>
     {{outlet}}

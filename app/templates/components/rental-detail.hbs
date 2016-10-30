@@ -1,13 +1,17 @@
-Located in {{rental.city}}, this {{rental.bedrooms}} bedroom {{rental.type}} is available by arrangement through {{rental.owner}}.
+<button class="content-right" {{ action 'delete' rental }}> Delete this posting </button>
+<hr>
+<h3>Located in {{rental.city}}
+, this {{rental.bedrooms}} bedroom {{rental.type}} is available by arrangement through {{rental.owner}}.</h3>
 <br>
 
-<p><img src="{{rental.image}}" alt="{{rental.type}}"></p>
+<img class="image-detail" src="{{rental.image}}" alt="{{rental.type}}">
 
 <h2>Reviews</h2>
-{{new-review}}
 <ul>
   {{#each sortedReviews as |review|}}
     {{review-tile review=review destroyReview="destroyReview"}}
+    {{else}}
+    <h4>Be the first to review this rental.</h4>
   {{/each}}
 </ul>
-<button {{ action 'delete' rental }}> Delete </button>
+<hr>
