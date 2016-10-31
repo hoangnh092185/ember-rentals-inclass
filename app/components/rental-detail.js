@@ -9,7 +9,6 @@ export default Ember.Component.extend({
         this.sendAction('destroyRental',rental);
       }
     },
-
     destroyReview(review) {
       this.sendAction('destroyReview',review);
     }
