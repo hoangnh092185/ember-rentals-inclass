@@ -14,7 +14,7 @@ export default Ember.Route.extend({
       rental.save();
     },
     destroyRental(rental) {
-      var rental_deletions = rental.get('review').map(function(review){
+      var rental_deletions = rental.get('reviews').map(function(review){
         return review.destroyRecord();
       });
       Ember.RSVP.all(rental_deletions).then(function(){
@@ -23,9 +23,10 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     saveReview(params) {
+      console.log(params)
       var rental = params.rental;
       var newReview = this.store.createRecord('review', params);
-      rental.get('review').addObject(newReview);
+      rental.get('reviews').addObject(newReview);
       newReview.save().then(function(){
         return rental.save();
       });
